@@ -1,0 +1,15 @@
+datasource db {
+  url      = "postgres://postgres:password@localhost:5432/postgres"
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model HeartRate {
+  id Int @id @default(autoincrement())
+  time String
+  bpm String
+  filename String
+}
